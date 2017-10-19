@@ -86,11 +86,11 @@ ms.lasthandoff: 07/28/2017
   
 ### <a name="to-create-a-list-of-bank-accounts"></a>Создание списка банковских счетов  
   
-1.  Вставьте следующее определение класса в файл **Program.cs** в класс `Program`.  
+1.  Вставьте следующее определение класса в файл **Program.cs** ниже класса `Program`.  
   
      [!code-cs[csProgGuideOfficeHowTo#2](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_2.cs)]  
   
-2.  Чтобы создать список `Main`, содержащий два счета, добавьте в метод `bankAccounts` следующий код.  
+2.  Добавьте в метод `Main` следующий код, создающий список `bankAccounts`, в котором содержится информация о двух банковских счетах.  
   
      [!code-cs[csProgGuideOfficeHowTo#3](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_3.cs)]  
   
@@ -98,7 +98,7 @@ ms.lasthandoff: 07/28/2017
   
 1.  Чтобы настроить лист Excel, добавьте в класс `Program` следующий метод.  
   
-     У метода [Add](http://go.microsoft.com/fwlink/?LinkId=210910) есть необязательный параметр для указания конкретного шаблона. Необязательные параметры, впервые появившиеся в [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], позволяют опускать аргумент для таких параметров, если требуется использовать значение параметра по умолчанию. Поскольку в следующем коде никакой аргумент не передается, в методе `Add` используется шаблон по умолчанию и создается новая книга. В эквивалентном операторе в более ранних версиях C# необходимо было использовать аргумент-местозаполнитель `ExcelApp.Workbooks.Add(Type.Missing)`.  
+     У метода [Add](http://go.microsoft.com/fwlink/?LinkId=210910) есть необязательный параметр для указания конкретного шаблона. Необязательные параметры, впервые появившиеся в [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], позволяют опускать аргумент, если требуется использовать значение параметра по умолчанию. Поскольку в следующем коде никакой аргумент не передается, в методе `Add` используется шаблон по умолчанию и создается новая книга. В эквивалентном операторе в более ранних версиях C# необходимо было использовать аргумент-местозаполнитель `ExcelApp.Workbooks.Add(Type.Missing)`.  
   
      [!code-cs[csProgGuideOfficeHowTo#4](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_4.cs)]  
   
